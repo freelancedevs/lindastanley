@@ -1,0 +1,35 @@
+footer{
+padding: 20px;
+background: $footerBG;
+text-align: center;
+nav{
+    display: inline-block;
+  margin: 0 auto 50px;
+
+  a{
+
+    color:white;
+    padding: 10px 20px 10px 0;
+    text-decoration: none;
+
+  }
+}
+.social-media{
+  margin:0 0 20px;
+  padding:0;
+  li{
+  display: inline-block;
+  padding: 30px;
+  a{
+
+    &:hover{
+      color: $red;
+    }
+  }
+  }
+}
+.copyright{
+  color: $titleColor;
+}
+
+}

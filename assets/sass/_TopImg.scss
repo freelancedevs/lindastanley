@@ -1,0 +1,55 @@
+#TopImg{
+  position: relative;
+  background: black;
+  min-height: 500px;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/905874/pexels-photo-905874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+
+  .title{
+    padding: 200px 0 80px;
+    text-align: right;
+    h1{
+      text-transform: uppercase;
+      color: white;
+      font-weight: 300;
+      font-size: 6rem;
+      font-family: $displayFont;
+    }
+
+    h5{
+      text-transform: uppercase;
+      color: white;
+      font-weight: 300;
+    }
+  }
+  .contact-info{
+    width:100%;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    text-align: right;
+    color: $paragraphColor;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    strong{
+      font-weight: bold;
+      color: white;
+    }
+
+    .booking{
+      margin-bottom: 10px;
+      color: $paragraphColor;
+    }
+
+    h2{
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+  }
+}
