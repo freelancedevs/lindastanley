@@ -1,58 +1,85 @@
-import {h, app} from 'hyperapp'
+import {h, app} from 'hyperapp';
+import axios from 'axios';
 
-export default function ContactUs({state, actions}) {
-  return (
-  <section id="ContactUs">
-  <div class="container">
-  <h5 class="comp-title">Contact Us</h5>
-  <h2>Every Womans Place</h2>
+ 
 
-  <div class="box">
-  <div class="row">
-  <div class="col-md-6">
-  <div class="title">
-  {state.companyInfo.location}
-  </div>
-  <h6 class="Address">
-  900 Bridge Street<br/>
-  Summerdale,Pa 19124
-  </h6>
-  <p>
-  <strong>email: </strong> <a href="mailto:@lindastanley.com">lindastanley.com</a>
-  </p>
-
-  </div>
-
-  <div class="col-md-6">
-  <h6>
-  Phone:
-  </h6>
-  <div class="title">
-  {state.companyInfo.phone}
-  </div>
-  <h6>
-  Wellness Service:
-  </h6>
-  <p>
-  Friday, Saturday and Sunday<br/>
-  from 12pm - 130pm
-  </p>
-  <h6>
-  Body Service:
-  </h6>
-  <p>
-  Daily<br/>
-  from 8am - 4pm
-  </p>
-
-  </div>
-  </div>
-
-  </div>
-
-  </div>
-  </section>
-  )
+export default function ContactUs({state, actions}){
+ state = {
+  form: {
+    name: '',
+    mob: '',
+    email: '',
+    mess: '',
+    }
 }
-// <Header state={state} actions={actions}/>
-// <Button state={state} actions={actions}/>
+console.log("outside actions object");
+
+   actions = {
+      onInputChange: (event) => state => {
+        console.log(state)
+        return{
+          form:{
+        ...state.form,
+        [event.target.name]: event.target.value
+        }
+
+      }
+
+      },
+
+      submitForm: () => {
+        console.log(state.form)
+     axios.post('htts://httpbin.org/anything', state.form)
+          .then(function (response) {
+          console.log(response.data);
+        })
+          .catch(function (error) {
+          console.log(error);
+        });
+      }
+}
+    
+ 
+console.log(actions.submitForm(state.form));
+      return(
+      h("div", {class: 'row'}, [
+        h("div", {class: 'col-md-4'}, [
+          h("div", {class: 'panel'}, [
+            h("h4", {}, 'Quick Contact'),
+            h("div", {class: 'fieldset'}, [
+              h("input", {type: 'text', placeholder: "Please input your Name", class:"form-control", 
+                          name: 'name',
+                         oninput: (event)=>actions.onInputChange(event)}),
+              h("input", {type: 'text', placeholder: "Please input your Mobile number", class:"form-control", 
+                          name: 'mob',
+                         oninput: (event)=>actions.onInputChange(event)}),
+              h("input", {type: 'text', placeholder: "Please input your Email", class:"form-control", 
+                          name: 'email',
+                         oninput: (event)=>actions.onInputChange(event)}),
+               h("textarea", {placeholder: "Please your message", class:"form-control",
+                              name: 'mess',
+                         oninput: (event)=>actions.onInputChange(event)}),
+              h("button", {type: 'button', class:"btn btn-primary", 
+                         onclick: ()=>actions.submitForm()}, "submit"),
+              
+            ])
+          ])
+        ]),
+      ])
+      )
+    
+ }
+   
+  
+  
+   
+
+
+   
+    
+
+
+
+
+
+

@@ -14,8 +14,15 @@ var reviewRight = function  (state, actions) {
     }}
   )
 }
+
+
+  
+
+
+
 export const actions = {
   reviewLeft,
-  reviewRight
-
+  reviewRight,
+ 
+  
 }

@@ -57,4 +57,5 @@ module.exports = {
             //     name: 'manifest' //But since there are no more common modules between them we end up with just the runtime code included in the manifest file
             // })
         ]
+        
 };

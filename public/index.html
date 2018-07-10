@@ -6,17 +6,56 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+ 
+<script src="server.js"></script>
+ 
+<script text="text/javascipt">
+function initMap(){
+  var location = {lat: 39.382017, lng: -74.555795};
+  var map = new google.maps.Map(document.getElementById("map"),
+    {zoom: 15,
+      center: location
+    })
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map
+  });
+}
+
+
+
+</script>
+<script text="text/javascript">
+
+
+
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyAlSj71bgiV2J6YwN_GZY_Eao_tQpX0Yxs&callback=initMap">
+</script>
+ <script src="contactus3.js"></script>
+
 </head>
 
 <body>
+
   <div id="app"></div>
+  
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="/js/components/vendor.js"></script>
   <script src="/js/components/hyper.js"></script>
-  
+
+
+ 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/hyperapp"></script>
+
+<div class="container"></div>
 </body>
 
 </html>

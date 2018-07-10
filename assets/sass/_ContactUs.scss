@@ -2,21 +2,71 @@
   padding: 100px 0;
   color: $black;
   background-color: $black;
+  text-color: white;
 
   .contact-bg{
 
   }
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  
+  
+}
+.input-field{
+  align-content:flex-start;
+}
+.map{
+  align-content: flex-end;
+}
+  .description{
+  color: white;
+  }
+
+  #map{
+
+    padding: 30px;
+    margin: 30px;
+  height: 300px;
+  width: 50%;
+ 
+   
+   }
+
+   input[type=text], input[type=help], input[type=email]{
+   width: 250px;
+   }
+
+   input[type=submit]{
+   background-color: red;
+   border:none;
+   border-radius: 10px;
+   width: 150px;
+   height: 45px;
+   }
+
+
 
   h2,
   h5{
     text-align: center;
     color:white;
   }
-
+  .events{
+  margin: 20px 10px;
+  }
+  
   .box{
-    padding: 70px;
+  display: flex;
+
+    padding: 50px;
     background-color: white;
     height: 500px;
+    width: 50%vh;
+
     .title{
       font-size: 2rem;
       font-family: $displayFont;

@@ -4,7 +4,14 @@ var companyInfo = {
   location:'Philadelphia,PA',
 }
 
-var specialTreatmentData = [
+var contactUs= {
+  name: "",
+  mob: "",
+  email: "",
+  mess: "",
+}
+
+ var specialTreatmentData = [
   {
   title:'Facial Treatment ',
   description:'Full wrinkle removal & Skin tightening',
@@ -22,7 +29,7 @@ var specialTreatmentData = [
 },
 ]
 
-var reviewsData = [
+ var reviewsData = [
   {
     company:'Cosemtics',
     author:'Dr. Regis Sams',
@@ -60,7 +67,7 @@ review: '1 bespoke glossier pinterest kogi schlitz, kombucha vinyl biodiesel vex
 },
 ]
 
-var randomQuoteData = [
+ var randomQuoteData =[
   {
     author: 'Doctor Keith',
     quote: 'Will refer others.'
@@ -77,12 +84,16 @@ var randomQuoteData = [
   author: 'doctor smith',
   quote: 'Grea work'
 },
+
 ]
+
+
 
 
 export const globalState = {
   count: 0,
   companyInfo,
+  contactUs,
   specialTreatmentData,
   reviewsData,
   randomQuoteData,

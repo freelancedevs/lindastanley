@@ -15,9 +15,10 @@ export default function App({state, actions}) {
     <OurStory state={state} actions={actions}/>
     <SpecialMenu state={state} actions={actions}/>
     <RandomQuote state={state} actions={actions}/>
-    <Reviews state={state} actions={actions}/>
-    <ContactUs state={state} actions={actions}/>
+     <Reviews state={state} actions={actions}/>
+     <ContactUs state={state} actions={actions}/>
     <Footer state={state} actions={actions}/>
     </div>
   )
 }
+
